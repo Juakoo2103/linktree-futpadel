@@ -170,8 +170,19 @@ function App() {
                 transform: activeButton === "copy" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.blue,
+                  "@media (hover: none)": {
+                    backgroundColor: logoColors.green,
+                  },
+                },
+                "&:active": {
+                  backgroundColor: logoColors.blue,
+                  transform: "scale(0.98)",
+                },
+                "&:focus": {
+                  backgroundColor: logoColors.green,
                 },
                 transition: "all 0.2s ease-in-out",
+                touchAction: "manipulation",
               }}
             >
               Copiar datos bancarios
@@ -195,8 +206,19 @@ function App() {
                   activeButton === "agenda" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.green,
+                  "@media (hover: none)": {
+                    backgroundColor: logoColors.blue,
+                  },
+                },
+                "&:active": {
+                  backgroundColor: logoColors.green,
+                  transform: "scale(0.98)",
+                },
+                "&:focus": {
+                  backgroundColor: logoColors.blue,
                 },
                 transition: "all 0.2s ease-in-out",
+                touchAction: "manipulation",
               }}
             >
               Agendar hora
@@ -220,8 +242,19 @@ function App() {
                   activeButton === "instagram" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.green,
+                  "@media (hover: none)": {
+                    backgroundColor: logoColors.blue,
+                  },
+                },
+                "&:active": {
+                  backgroundColor: logoColors.green,
+                  transform: "scale(0.98)",
+                },
+                "&:focus": {
+                  backgroundColor: logoColors.blue,
                 },
                 transition: "all 0.2s ease-in-out",
+                touchAction: "manipulation",
               }}
             >
               Síguenos en Instagram
@@ -245,8 +278,19 @@ function App() {
                   activeButton === "whatsapp" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.blue,
+                  "@media (hover: none)": {
+                    backgroundColor: logoColors.green,
+                  },
+                },
+                "&:active": {
+                  backgroundColor: logoColors.blue,
+                  transform: "scale(0.98)",
+                },
+                "&:focus": {
+                  backgroundColor: logoColors.green,
                 },
                 transition: "all 0.2s ease-in-out",
+                touchAction: "manipulation",
               }}
             >
               Reservar por WhatsApp
