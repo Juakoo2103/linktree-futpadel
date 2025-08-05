@@ -3,7 +3,6 @@ import {
   Container,
   Button,
   Typography,
-  Snackbar,
   Stack,
   Avatar,
   Box,
@@ -16,6 +15,7 @@ import {
   Instagram,
   WhatsApp,
 } from "@mui/icons-material";
+import toast, { Toaster } from "react-hot-toast";
 import logo from "./assets/logo.png";
 
 // Colores del logo
@@ -41,7 +41,6 @@ const theme = createTheme({
 });
 
 function App() {
-  const [copied, setCopied] = useState(false);
   const [activeButton, setActiveButton] = useState(null);
 
   const bankData = `
@@ -57,10 +56,35 @@ function App() {
     try {
       setActiveButton("copy");
       await navigator.clipboard.writeText(bankData.trim());
-      setCopied(true);
+      toast.success("¡Datos bancarios copiados! 😃", {
+        duration: 2500,
+        position: "bottom-center",
+        style: {
+          background: logoColors.green,
+          color: "white",
+          fontWeight: "bold",
+          borderRadius: "25px",
+          padding: "12px 20px",
+        },
+        iconTheme: {
+          primary: "white",
+          secondary: logoColors.green,
+        },
+      });
       setTimeout(() => setActiveButton(null), 200);
     } catch (err) {
       console.error("Error al copiar", err);
+      toast.error("Error al copiar los datos", {
+        duration: 2500,
+        position: "bottom-center",
+        style: {
+          background: "#f44336",
+          color: "white",
+          fontWeight: "bold",
+          borderRadius: "25px",
+          padding: "12px 20px",
+        },
+      });
       setTimeout(() => setActiveButton(null), 200);
     }
   };
@@ -230,12 +254,8 @@ function App() {
           </Stack>
         </Box>
 
-        <Snackbar
-          open={copied}
-          autoHideDuration={2500}
-          onClose={() => setCopied(false)}
-          message="Datos bancarios copiados😃"
-        />
+        {/* Toast notifications */}
+        <Toaster />
       </Container>
     </ThemeProvider>
   );
