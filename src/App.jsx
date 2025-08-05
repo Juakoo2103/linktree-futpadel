@@ -109,7 +109,7 @@ function App() {
         {/* Header Section */}
         <Box
           sx={{
-            paddingTop: 4,
+            paddingTop: 2,
             paddingBottom: 6,
             display: "flex",
             flexDirection: "column",
