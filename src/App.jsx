@@ -234,7 +234,7 @@ function App() {
           open={copied}
           autoHideDuration={2500}
           onClose={() => setCopied(false)}
-          message="Datos bancarios copiados👍🏻"
+          message="Datos bancarios copiados😃"
         />
       </Container>
     </ThemeProvider>
