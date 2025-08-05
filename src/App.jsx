@@ -262,7 +262,7 @@ function App() {
             <Button
               variant="contained"
               startIcon={<WhatsApp />}
-              href="https://wa.me/56952626330?text=Hola,%20quiero%20hacer%20una%20reserva%20en%20Futpadel%20Club"
+              href="https://wa.me/56952626330?text=Hola%20👋%2C%20quiero%20hacer%20una%20reserva%20en%20Futpadel%20Club%20🎾🕐%20%21"
               target="_blank"
               rel="noopener"
               fullWidth
