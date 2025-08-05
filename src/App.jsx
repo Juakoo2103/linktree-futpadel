@@ -16,7 +16,14 @@ import {
   WhatsApp,
 } from "@mui/icons-material";
 import toast, { Toaster } from "react-hot-toast";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./carousel.css";
 import logo from "./assets/logo.png";
+import imagen1 from "./assets/img/imagen1.jpg";
+import imagen2 from "./assets/img/imagen2.jpg";
+import imagen3 from "./assets/img/imagen3.jpg";
 
 // Colores del logo
 const logoColors = {
@@ -39,6 +46,40 @@ const theme = createTheme({
     },
   },
 });
+
+// Imágenes para el carrusel - usando las imágenes locales
+const carouselImages = [
+  {
+    src: imagen1,
+    alt: "Futpadel Club - Instalaciones",
+    title: "Nuestras Instalaciones",
+  },
+  {
+    src: imagen2,
+    alt: "Futpadel Club - Canchas",
+    title: "Canchas de Pádel",
+  },
+  {
+    src: imagen3,
+    alt: "Futpadel Club - Ambiente",
+    title: "Valhalla FC",
+  },
+];
+
+// Configuración del carrusel
+const carouselSettings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  pauseOnHover: true,
+  arrows: false,
+  fade: true,
+  cssEase: "linear",
+};
 
 function App() {
   const [activeButton, setActiveButton] = useState(null);
@@ -110,7 +151,7 @@ function App() {
         <Box
           sx={{
             paddingTop: 2,
-            paddingBottom: 6,
+            paddingBottom: 4,
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
@@ -143,6 +184,57 @@ function App() {
             Futpadel club
           </Typography>
           <Typography variant="body2">¡Gracias por preferirnos!</Typography>
+        </Box>
+
+        {/* Image Carousel Section */}
+        <Box sx={{ mb: 4, mx: 2 }}>
+          <Slider {...carouselSettings}>
+            {carouselImages.map((image, index) => (
+              <Box key={index}>
+                <Box
+                  sx={{
+                    position: "relative",
+                    height: "200px",
+                    borderRadius: "15px",
+                    overflow: "hidden",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                  }}
+                >
+                  <img
+                    src={image.src}
+                    alt={image.alt}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      borderRadius: "15px",
+                    }}
+                  />
+                  <Box
+                    sx={{
+                      position: "absolute",
+                      bottom: 0,
+                      left: 0,
+                      right: 0,
+                      background:
+                        "linear-gradient(transparent, rgba(0,0,0,0.7))",
+                      color: "white",
+                      padding: "20px 15px 15px",
+                      borderRadius: "0 0 15px 15px",
+                    }}
+                  >
+                    <Typography
+                      variant="subtitle1"
+                      fontWeight="bold"
+                      sx={{ textShadow: "1px 1px 2px rgba(0,0,0,0.8)" }}
+                    >
+                      {image.title}
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            ))}
+          </Slider>
         </Box>
 
         {/* Buttons Section */}
