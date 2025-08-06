@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:geo="http://www.google.com/geo/schemas/sitemap/1.0">
+  <url>
+    <loc>https://futpadel-club-la-tuna.com/</loc>
+    <lastmod>2025-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://futpadel-club-la-tuna.com/logo.png</image:loc>
+      <image:title>Futpadel Club La Tuna - Canchas de Pádel y Futbolito</image:title>
+      <image:caption>Logo oficial del Futpadel Club La Tuna en Santa Cruz, Chile - Canchas de pádel y futbolito</image:caption>
+    </image:image>
+    <geo:geo>
+      <geo:format>kml</geo:format>
+    </geo:geo>
+  </url>
+</urlset>

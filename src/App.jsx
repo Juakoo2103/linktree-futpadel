@@ -56,13 +56,13 @@ const carouselImages = [
   },
   {
     src: imagen2,
-    alt: "Futpadel Club - Canchas",
+    alt: "Futpadel Club - Canchas de Pádel",
     title: "Canchas de Pádel",
   },
   {
     src: imagen3,
-    alt: "Futpadel Club - Ambiente",
-    title: "Valhalla FC",
+    alt: "Futpadel Club - Canchas de Futbolito",
+    title: "Canchas de Futbolito",
   },
 ];
 
@@ -83,6 +83,14 @@ const carouselSettings = {
 
 function App() {
   const [activeButton, setActiveButton] = useState(null);
+
+  // Datos de contacto
+  const phone = "56952626330";
+  const whatsappMessage =
+    "🏆 Hola! Vengo desde el enlace de Futpadel Club. Me gustaría hacer una reserva. ¿Podrían ayudarme? 🎾⚽";
+  const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
   const bankData = `
   Inversiones Jlt Spa
@@ -167,7 +175,6 @@ function App() {
               alignItems: "center",
               borderRadius: "50%",
               overflow: "hidden",
-              /* backgroundColor: "white", */
             }}
           >
             <img
@@ -262,16 +269,20 @@ function App() {
                 transform: activeButton === "copy" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.blue,
+                  color: "white",
                   "@media (hover: none)": {
                     backgroundColor: logoColors.green,
+                    color: "white",
                   },
                 },
                 "&:active": {
                   backgroundColor: logoColors.blue,
+                  color: "white",
                   transform: "scale(0.98)",
                 },
                 "&:focus": {
                   backgroundColor: logoColors.green,
+                  color: "white",
                 },
                 transition: "all 0.2s ease-in-out",
                 touchAction: "manipulation",
@@ -291,23 +302,27 @@ function App() {
               sx={{
                 backgroundColor:
                   activeButton === "agenda"
-                    ? logoColors.lightGreen
-                    : logoColors.blue,
+                    ? logoColors.darkBlue
+                    : logoColors.green,
                 color: "white",
                 transform:
                   activeButton === "agenda" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
-                  backgroundColor: logoColors.green,
+                  backgroundColor: logoColors.blue,
+                  color: "white",
                   "@media (hover: none)": {
-                    backgroundColor: logoColors.blue,
+                    backgroundColor: logoColors.green,
+                    color: "white",
                   },
                 },
                 "&:active": {
-                  backgroundColor: logoColors.green,
+                  backgroundColor: logoColors.blue,
+                  color: "white",
                   transform: "scale(0.98)",
                 },
                 "&:focus": {
-                  backgroundColor: logoColors.blue,
+                  backgroundColor: logoColors.green,
+                  color: "white",
                 },
                 transition: "all 0.2s ease-in-out",
                 touchAction: "manipulation",
@@ -327,23 +342,27 @@ function App() {
               sx={{
                 backgroundColor:
                   activeButton === "instagram"
-                    ? logoColors.lightGreen
-                    : logoColors.blue,
+                    ? logoColors.darkBlue
+                    : logoColors.green,
                 color: "white",
                 transform:
                   activeButton === "instagram" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
-                  backgroundColor: logoColors.green,
+                  backgroundColor: logoColors.blue,
+                  color: "white",
                   "@media (hover: none)": {
-                    backgroundColor: logoColors.blue,
+                    backgroundColor: logoColors.green,
+                    color: "white",
                   },
                 },
                 "&:active": {
-                  backgroundColor: logoColors.green,
+                  backgroundColor: logoColors.blue,
+                  color: "white",
                   transform: "scale(0.98)",
                 },
                 "&:focus": {
-                  backgroundColor: logoColors.blue,
+                  backgroundColor: logoColors.green,
+                  color: "white",
                 },
                 transition: "all 0.2s ease-in-out",
                 touchAction: "manipulation",
@@ -354,7 +373,7 @@ function App() {
             <Button
               variant="contained"
               startIcon={<WhatsApp />}
-              href="https://wa.me/56952626330?text=Hola%20👋%2C%20quiero%20hacer%20una%20reserva%20en%20Futpadel%20Club%20🎾🕐%20%21"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener"
               fullWidth
@@ -370,16 +389,20 @@ function App() {
                   activeButton === "whatsapp" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.blue,
+                  color: "white",
                   "@media (hover: none)": {
                     backgroundColor: logoColors.green,
+                    color: "white",
                   },
                 },
                 "&:active": {
                   backgroundColor: logoColors.blue,
+                  color: "white",
                   transform: "scale(0.98)",
                 },
                 "&:focus": {
                   backgroundColor: logoColors.green,
+                  color: "white",
                 },
                 transition: "all 0.2s ease-in-out",
                 touchAction: "manipulation",
