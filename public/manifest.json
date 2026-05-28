@@ -1,29 +1,29 @@
 {
   "name": "Futpadel Club La Tuna",
   "short_name": "Futpadel Club",
-  "description": "Club deportivo profesional en Santa Cruz, Chile con canchas de pádel y futbolito",
+  "description": "Reservas de canchas de pádel y futbolito en Futpadel Club La Tuna, Santa Cruz.",
   "start_url": "/",
+  "scope": "/",
+  "id": "futpadel-club-la-tuna",
   "display": "standalone",
-  "background_color": "#8bc34a",
-  "theme_color": "#3f51b5",
   "orientation": "portrait",
+  "background_color": "#071311",
+  "theme_color": "#97d44b",
   "categories": ["sports", "lifestyle", "recreation"],
   "lang": "es-CL",
   "dir": "ltr",
   "icons": [
     {
-      "src": "/src/assets/logo.png",
+      "src": "/logo.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
     },
     {
-      "src": "/src/assets/logo.png",
+      "src": "/logo.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable any"
+      "purpose": "any"
     }
-  ],
-  "scope": "/",
-  "id": "futpadel-club-la-tuna"
+  ]
 }

@@ -533,8 +533,9 @@ function App() {
               }}
             >
               <LocationOn sx={{ fontSize: 17 }} />
-              <span>La Tuna · Reservas y comunidad deportiva</span>
+              <span>La Tuna</span>
               <SportsSoccer sx={{ fontSize: 17 }} />
+              <span>Reservas y comunidad deportiva</span>
             </Box>
           </Stack>
         </Container>
