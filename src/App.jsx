@@ -359,47 +359,34 @@ function App() {
                 pt: 3,
                 display: "flex",
                 flexDirection: "column",
-                gap: 1.4,
+                alignItems: "center",
+                textAlign: "center",
+                gap: 4,
               }}
             >
               <Box
                 sx={{
-                  width: 86,
-                  height: 86,
-                  borderRadius: 4,
+                  width: 132,
+                  minHeight: 126,
                   display: "grid",
                   placeItems: "center",
-                  overflow: "hidden",
-                  backgroundColor: colors.elevated,
-                  border: `1px solid ${colors.border}`,
-                  boxShadow: `0 18px 42px ${colors.shadow}`,
                 }}
               >
                 <img
                   src={logo}
                   alt="Futpadel Club"
-                  style={{ width: "84%", height: "84%", objectFit: "contain" }}
+                  style={{ width: "100%", height: "auto", display: "block" }}
                 />
               </Box>
 
-              <Box>
+              <Box sx={{ pt: 1 }}>
                 <Typography
                   component="h1"
                   sx={{
-                    fontSize: { xs: "2.35rem", sm: "2.85rem" },
-                    lineHeight: 0.96,
-                    fontWeight: 900,
-                    letterSpacing: 0,
-                  }}
-                >
-                  Futpadel Club
-                </Typography>
-                <Typography
-                  sx={{
-                    mt: 1,
                     color: colors.muted,
                     fontSize: "1rem",
                     fontWeight: 600,
+                    maxWidth: 320,
                   }}
                 >
                   Canchas, reservas y comunidad deportiva
