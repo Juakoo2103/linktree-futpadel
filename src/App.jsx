@@ -413,6 +413,24 @@ function App() {
           </Stack>
         </Box>
 
+        <Box
+          component="footer"
+          sx={{
+            pt: 4,
+            pb: 1,
+          }}
+        >
+          <Typography
+            variant="caption"
+            sx={{
+              color: "text.secondary",
+              fontWeight: 500,
+            }}
+          >
+            Derechos reservados juakooDEV
+          </Typography>
+        </Box>
+
         {/* Toast notifications */}
         <Toaster />
       </Container>
