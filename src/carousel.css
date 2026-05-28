@@ -1,21 +1,21 @@
 /* Estilos personalizados para el carrusel */
 .slick-dots {
-  bottom: -40px !important;
+  bottom: 14px !important;
 }
 
 .slick-dots li button:before {
-  color: #52525b !important;
-  font-size: 12px !important;
-  opacity: 0.5 !important;
+  color: #ffffff !important;
+  font-size: 9px !important;
+  opacity: 0.42 !important;
 }
 
 .slick-dots li.slick-active button:before {
-  color: #27272a !important;
+  color: #f1c94a !important;
   opacity: 1 !important;
 }
 
 .slick-dots li {
-  margin: 0 2px !important;
+  margin: 0 1px !important;
 }
 
 /* Animación suave para las imágenes */
@@ -29,16 +29,16 @@
 
 /* Mejora la responsividad */
 .slick-slider {
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 }
 
 /* Estilo para dispositivos móviles */
 @media (max-width: 600px) {
   .slick-dots {
-    bottom: -35px !important;
+    bottom: 12px !important;
   }
 
   .slick-dots li button:before {
-    font-size: 10px !important;
+    font-size: 8px !important;
   }
 }
