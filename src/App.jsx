@@ -4,7 +4,6 @@ import {
   Button,
   Typography,
   Stack,
-  Avatar,
   Box,
   ThemeProvider,
   createTheme,
@@ -25,17 +24,25 @@ import imagen1 from "./assets/img/imagen1.jpg";
 import imagen2 from "./assets/img/imagen2.jpg";
 import imagen3 from "./assets/img/imagen3.jpg";
 
-// Colores del logo
+// Paleta neutra
 const logoColors = {
-  green: "#8bc34a",
-  blue: "#3f51b5",
-  lightGreen: "#9ccc65",
-  darkBlue: "#303f9f",
+  green: "#374151",
+  blue: "#111827",
+  lightGreen: "#52525b",
+  darkBlue: "#27272a",
 };
 
 // Tema personalizado
 const theme = createTheme({
   palette: {
+    background: {
+      default: "#f7f7f5",
+      paper: "rgba(255, 255, 255, 0.88)",
+    },
+    text: {
+      primary: "#1f2937",
+      secondary: "#6b7280",
+    },
     primary: {
       main: logoColors.green,
       dark: logoColors.lightGreen,
@@ -204,7 +211,7 @@ function App() {
                     height: "200px",
                     borderRadius: "15px",
                     overflow: "hidden",
-                    boxShadow: "0 4px 20px rgba(0,0,0,0.1)",
+                    boxShadow: "0 12px 34px rgba(17, 24, 39, 0.16)",
                   }}
                 >
                   <img
@@ -266,6 +273,9 @@ function App() {
                     ? logoColors.darkBlue
                     : logoColors.green,
                 color: "white",
+                borderRadius: 2,
+                boxShadow: "0 10px 28px rgba(17, 24, 39, 0.16)",
+                textTransform: "none",
                 transform: activeButton === "copy" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
                   backgroundColor: logoColors.blue,
@@ -305,6 +315,9 @@ function App() {
                     ? logoColors.darkBlue
                     : logoColors.green,
                 color: "white",
+                borderRadius: 2,
+                boxShadow: "0 10px 28px rgba(17, 24, 39, 0.16)",
+                textTransform: "none",
                 transform:
                   activeButton === "agenda" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
@@ -345,6 +358,9 @@ function App() {
                     ? logoColors.darkBlue
                     : logoColors.green,
                 color: "white",
+                borderRadius: 2,
+                boxShadow: "0 10px 28px rgba(17, 24, 39, 0.16)",
+                textTransform: "none",
                 transform:
                   activeButton === "instagram" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
@@ -385,6 +401,9 @@ function App() {
                     ? logoColors.darkBlue
                     : logoColors.green,
                 color: "white",
+                borderRadius: 2,
+                boxShadow: "0 10px 28px rgba(17, 24, 39, 0.16)",
+                textTransform: "none",
                 transform:
                   activeButton === "whatsapp" ? "scale(0.98)" : "scale(1)",
                 "&:hover": {
